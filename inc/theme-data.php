@@ -96,6 +96,7 @@ function hubby_locations(): array
         'queen-creek' => 'Queen Creek',
         'mesa' => 'Mesa',
         'tempe' => 'Tempe',
+        'san-tan-valley' => 'San Tan Valley',
     ];
 }
 
@@ -106,7 +107,7 @@ function hubby_faqs(): array
         ['Are materials and chemicals included?', 'Yes. Materials, scheduled service, and retreatments between scheduled visits are included in your flat monthly rate.'],
         ['What is the price-lock guarantee?', 'The rate you sign up at stays yours. If pricing changes later for new customers, existing subscribers keep their original rate.'],
         ['Do I need to be home during the visit?', 'We prefer someone home for the first visit. After that, many subscribers provide access instructions for exterior service.'],
-        ['What areas do you serve?', 'Hubby Pest Control serves Gilbert, Chandler, Queen Creek, Mesa, and Tempe in Arizona.'],
+        ['What areas do you serve?', 'Hubby Pest Control serves Gilbert, Chandler, Queen Creek, Mesa, Tempe, and San Tan Valley in Arizona.'],
         ['Are technicians licensed in Arizona?', 'Technicians are licensed through the Arizona Office of Pest Management, background-checked, and insured.'],
     ];
 }

@@ -104,6 +104,14 @@ function hubby_is_contact_route(): bool
         || hubby_get_request_path() === 'contact';
 }
 
+function hubby_is_service_areas_route(): bool
+{
+    return is_page_template('template-service-areas.php')
+        || is_page('service-areas')
+        || get_query_var('hubby_route') === 'service-areas'
+        || hubby_get_request_path() === 'service-areas';
+}
+
 function hubby_get_header_logo_uri(): string
 {
     return content_url('/uploads/2026/05/hubby-pest-logo.png');
@@ -117,6 +125,7 @@ function hubby_header_fallback_menu(): void
         ['Services', home_url('/#pests')],
         ['Pricing', home_url('/pricing/')],
         ['Reviews', home_url('/reviews/')],
+        ['Service Areas', home_url('/service-areas/')],
         ['Contact', home_url('/contact/')],
     ];
 
@@ -141,7 +150,7 @@ function hubby_footer_company_fallback_menu(): void
     $items = [
         ['About Hubby', home_url('/about/')],
         ['How It Works', home_url('/#process')],
-        ['Service Areas', home_url('/gilbert-pest-control/')],
+        ['Service Areas', home_url('/service-areas/')],
         ['Franchise Info', '#'],
         ['Careers', '#'],
     ];
@@ -157,6 +166,10 @@ function hubby_document_title(string $title): string
 {
     if (hubby_is_contact_route()) {
         return 'Contact Hubby Pest Control | Free Quote | East Valley AZ | 480-845-3833';
+    }
+
+    if (hubby_is_service_areas_route()) {
+        return 'Service Areas | Hubby Pest Control | East Valley Arizona';
     }
 
     return $title;
@@ -198,6 +211,7 @@ add_action('template_redirect', 'hubby_redirect_index_permalinks', 1);
 function hubby_register_virtual_routes(): void
 {
     add_rewrite_rule('^contact/?$', 'index.php?hubby_route=contact', 'top');
+    add_rewrite_rule('^service-areas/?$', 'index.php?hubby_route=service-areas', 'top');
 }
 add_action('init', 'hubby_register_virtual_routes');
 
@@ -210,19 +224,27 @@ add_filter('query_vars', 'hubby_query_vars');
 
 function hubby_virtual_template(string $template): string
 {
-    if (!hubby_is_contact_route()) {
-        return $template;
+    if (hubby_is_contact_route()) {
+        global $wp_query;
+        if ($wp_query instanceof WP_Query) {
+            $wp_query->is_404 = false;
+            $wp_query->is_page = true;
+        }
+        status_header(200);
+        return HUBBY_THEME_DIR . '/template-contact.php';
     }
 
-    global $wp_query;
-
-    if ($wp_query instanceof WP_Query) {
-        $wp_query->is_404 = false;
-        $wp_query->is_page = true;
+    if (hubby_is_service_areas_route()) {
+        global $wp_query;
+        if ($wp_query instanceof WP_Query) {
+            $wp_query->is_404 = false;
+            $wp_query->is_page = true;
+        }
+        status_header(200);
+        return HUBBY_THEME_DIR . '/template-service-areas.php';
     }
 
-    status_header(200);
-    return HUBBY_THEME_DIR . '/template-contact.php';
+    return $template;
 }
 add_filter('template_include', 'hubby_virtual_template', 99);
 

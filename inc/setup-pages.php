@@ -15,6 +15,7 @@ function hubby_seed_pages(): void
         'about' => ['About', 'template-about.php'],
         'reviews' => ['Reviews', 'template-reviews.php'],
         'contact' => ['Contact', 'template-contact.php'],
+        'service-areas' => ['Service Areas', 'template-service-areas.php'],
         'blog' => ['Blog', ''],
         'thank-you' => ['Thank You', 'template-thank-you.php'],
     ];
