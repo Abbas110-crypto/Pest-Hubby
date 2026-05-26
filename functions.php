@@ -36,7 +36,7 @@ add_action('after_setup_theme', 'hubby_setup');
 
 function hubby_enqueue_assets(): void
 {
-    $is_contact_template = hubby_is_contact_route();
+    $uses_contact_css = hubby_is_contact_route() || hubby_is_service_areas_route();
     $global_deps = ['hubby-fonts'];
 
     wp_enqueue_style(
@@ -46,7 +46,7 @@ function hubby_enqueue_assets(): void
         null
     );
 
-    if ($is_contact_template) {
+    if ($uses_contact_css) {
         wp_enqueue_style(
             'hubby-contact',
             HUBBY_THEME_URI . '/assets/css/contact.css',
