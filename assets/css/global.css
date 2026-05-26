@@ -1,0 +1,50 @@
+﻿/* Global Hubby header from contact prototype + footer from homepage prototype */
+.top-bar{background:#050507;border-bottom:1px solid rgba(255,255,255,.08);padding:9px 60px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.top-bar-left{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.top-bar .tb-item{font-size:11px;font-weight:600;color:rgba(255,255,255,.45);letter-spacing:.04em}
+.tb-stars{display:flex;align-items:center;gap:6px}
+.tb-urgency{font-size:11px;font-weight:700;color:#0094FF}
+.tb-urgency a{color:#fff;text-decoration:underline}
+nav{position:sticky!important;top:0;left:auto;right:auto;z-index:200;background:rgba(8,8,8,.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.08);padding:0 60px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{text-decoration:none;display:flex;align-items:center;flex-shrink:0}
+.nav-logo img{display:block;width:180px;height:77px;object-fit:contain;border:0!important;border-radius:0!important}
+.nav-links{display:flex!important;align-items:center;gap:28px;list-style:none;margin:0;padding:0}
+.nav-links li{position:relative;margin:0;padding:0}
+.nav-links a{color:rgba(255,255,255,.65)!important;text-decoration:none;font-size:13px!important;font-weight:600!important;letter-spacing:.05em!important;text-transform:uppercase;transition:color .2s;white-space:nowrap;background:transparent!important;padding:0!important;border:0!important}
+.nav-links a:hover,.nav-links a.active,.nav-links .current-menu-item>a,.nav-links .current_page_item>a{color:#fff!important}
+.nav-links .menu-item-has-children>a::after{content:' â–¾';font-size:12px;color:rgba(255,255,255,.5)}
+.nav-links .sub-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:rgba(10,10,10,.98);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:8px 0;min-width:210px;z-index:300;box-shadow:0 20px 40px rgba(0,0,0,.5);list-style:none;margin:0}
+.nav-links .menu-item-has-children:hover>.sub-menu{display:block}
+.nav-links .sub-menu a{display:block!important;padding:9px 18px!important;font-size:13px!important;color:rgba(255,255,255,.6)!important;text-decoration:none;transition:all .15s;text-transform:none!important;letter-spacing:0!important}
+.nav-links .sub-menu a::after{content:none!important}
+.nav-links .sub-menu a:hover{color:#fff!important;background:rgba(0,148,255,.08)!important;padding-left:22px!important}
+.nav-cta{background:#0094FF;color:#fff!important;padding:10px 20px;border-radius:3px;font-weight:700;font-size:13px;text-decoration:none;letter-spacing:.05em;text-transform:uppercase;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-cta:hover{background:#0077CC}
+.hero{margin-top:0!important}
+body.admin-bar nav{top:32px!important}
+body.admin-bar .hero{margin-top:0!important}
+footer{background:#0D0D0D!important;border-top:1px solid rgba(255,255,255,.08)!important;padding:72px 80px 40px!important}
+footer .footer-grid{display:grid!important;grid-template-columns:2.5fr 1fr 1fr 1fr!important;gap:60px!important;margin-bottom:60px!important;padding:0!important}
+.footer-brand-row{display:flex;align-items:center;gap:12px;margin-bottom:20px;text-decoration:none}
+.footer-brand-row img{height:40px!important;width:40px!important;border-radius:50%!important;object-fit:cover!important;border:2px solid rgba(0,148,255,.2)!important}
+.fb-name strong{display:block;font-family:'Bebas Neue',cursive;font-size:20px;letter-spacing:3px;color:#fff;line-height:1}
+.fb-name span{font-size:9px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#0094FF}
+.footer-about{font-size:13px;color:rgba(255,255,255,.35);line-height:1.8;font-weight:300;margin:0}
+.footer-col h6{font-family:'Bebas Neue',cursive;font-size:14px;letter-spacing:3px;color:rgba(255,255,255,.25);margin:0 0 20px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin:0;padding:0}
+.footer-col ul li,.footer-col ul li a{color:rgba(255,255,255,.4);text-decoration:none;font-size:13px;font-weight:300;transition:color .2s}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-bottom p{font-size:12px;color:rgba(255,255,255,.18);margin:0}
+.footer-social{display:flex;gap:10px}
+.fsoc{width:34px;height:34px;border:1px solid rgba(255,255,255,.08);border-radius:4px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.25);font-size:13px;text-decoration:none;transition:all .2s}
+.fsoc:hover{border-color:rgba(0,148,255,.25);color:#0094FF}
+.footer-proof-row{border-top:1px solid rgba(255,255,255,.06);padding:20px 60px;background:#040404;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;margin:0 -80px}
+.footer-proof-item{display:flex;align-items:center;gap:8px}
+.footer-proof-icon{font-size:18px}.footer-proof-title{font-size:11px;font-weight:700;color:rgba(255,255,255,.8);letter-spacing:.05em}.footer-proof-sub{font-size:10px;color:rgba(255,255,255,.3)}
+.footer-proof-divider{width:1px;height:28px;background:rgba(255,255,255,.08)}
+.footer-trustline{border-top:1px solid rgba(255,255,255,.06);margin-top:32px;padding-top:20px;display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap}
+.footer-trustline span{font-size:11px;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.06em}.footer-trustline .sep{color:rgba(255,255,255,.1)}
+#sticky-cta{position:fixed;bottom:-72px;left:0;right:0;z-index:999;transition:bottom .3s ease;background:rgba(8,8,8,.97);backdrop-filter:blur(20px);border-top:1px solid rgba(0,148,255,.2);padding:10px 40px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:900px){.top-bar,.nav-links{display:none!important}nav{padding-left:24px!important;padding-right:24px!important}.nav-logo img{width:180px;height:77px}footer{padding-left:24px!important;padding-right:24px!important}footer .footer-grid{grid-template-columns:1fr!important}.footer-proof-row{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}#sticky-cta{padding-left:20px;padding-right:20px}}
+@media(max-width:782px){body.admin-bar nav{top:46px!important}}
