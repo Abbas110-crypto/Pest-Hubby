@@ -1,6 +1,6 @@
 <?php
 /**
- * Homepage content from the approved v13 HTML prototype, using global theme header/footer.
+ * Homepage content from the approved v13 HTML prototype, using global theme header/footer. test commit
  */
 if (!defined('ABSPATH')) {
     exit;
